@@ -1,6 +1,6 @@
         /*! Simple HttpErrorPages | MIT X11 License | https://github.com/AndiDittrich/HttpErrorPages */
         html {
-            font-family: sans-serif;
+            font-family: sans-serif,Tahoma;
             line-height: 1.15;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%
@@ -118,7 +118,8 @@
         }
 
         img {
-            border-style: none
+            border-style: none;
+            max-width: 400px;
         }
 
         svg:not(:root) {
@@ -248,7 +249,7 @@
         }
 
         body {
-            color: #fff;
+            color: #fff; 
             text-align: center;
             text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
             padding: 0;
@@ -256,7 +257,7 @@
             -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .8);
             box-shadow: inset 0 0 100px rgba(0, 0, 0, .8);
             display: table;
-            font-family: "Open Sans", Arial, sans-serif
+            font-family: "Open Sans", Arial, sans-serif, Tahoma
         }
 
         h1 {
@@ -302,3 +303,58 @@
             color: #a0a0a0;
             font-size: 14px
         }
+
+        .section-main,
+        .article-main {
+            text-align: left;
+            color: silver;
+            font-size: 14px;
+        }
+
+        .indent-1{
+            text-indent: 1em;
+        }
+
+        .indent-2{
+            text-indent: 2em;
+        }
+
+        .indent-3{
+            text-indent: 3em;
+        }
+
+        .indent-4{
+            text-indent: 4em;
+        }
+
+        span.yellow {
+            display: inline; /* the default for span */
+            padding: 2px;
+            border: 1px solid;  
+            background-color: yellow;
+            color: blue;
+        }
+
+        div.text { max-width: 90%; text-align: center;  margin-bottom: 24px;}
+
+        #main_title_box { text-align: center; font-family: sans-serif; }
+        #main_title_box div.title { font-family: Verdana,Helvetica,Arial; color: #1b7a3a; font-size: 24pt;
+                                    font-weight: bold;
+                                  }
+        #main_title_box div.subtitle { font-family: sans-serif; margin-top: 0pt; color: gray; font-size: 16pt; }
+
+        .section-main { text-align: center;
+            position: relative;
+            width: 67%;
+            float: right;
+        }
+
+        .article-main { max-width: 600;
+            position: relative;
+        }
+
+        #left_navigation { position: relative; max-width:33%; text-align:left; float: left;}
+
+        #image_desc {font-size: small; font-style: italic;}
+
+
