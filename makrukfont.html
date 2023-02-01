@@ -1,128 +1,257 @@
+<!DOCTYPE html>
 <html lang="th">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Makruk font and Winboard</title>
-    <link rel="stylesheet" href="basic.css">
+<meta charset="UTF-8">
+<title>Makruk font and Winboard</title>
+<meta name="description" content="Makruk, Thai chess, หมากรุก, หมากรุกไทย, โปรแกรมหมากรุกไทย, บอทหมากรุกไทย"> 
+<meta name="makruk" content="Thai chess, หมากรุก, หมากรุกไทย, โปรแกรมหมากรุกไทย, บอทหมากรุกไทย">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun&family=Chakra+Petch">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Sarabun, 'Chakra Petch', Tahoma, serif;
+}
+
+h1 {
+	font-family: 'Chakra Petch';
+}
+
+/* Style the header */
+header {
+	background-color: #666;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+/* Container for flexboxes */
+section {
+	display: -webkit-flex;
+	display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+	font-family: 'Chakra Petch';
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background: #ccc;
+	padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* Style the content */
+article {
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	background-color: #f1f1f1;
+	padding: 10px;
+}
+
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+  }
+}
+
+figcaption {
+	font-size: 80%;
+	color:blue;
+}
+
+/* Indentation */
+.indent-1{
+	text-indent: 1em;
+}
+
+.indent-2{
+	text-indent: 2em;
+}
+
+.indent-3{
+	text-indent: 3em;
+}
+
+.indent-4{
+	text-indent: 4em;
+}
+</style>
 </head>
 
 <body>
-
-    <div class="text">
-        <div id="main_title_box">
-            <div class="title">BJ makruk's page</div>
-            <div class="subtitle">ขั้นตอนการติดตั้ง MakrukFont ให้กับ Winboard</div>
-        </div>
-    </div>
+<h1>BJ-makruk's page</h1>
+<h2>Thai chess lover</h2>
+<p>เว็บเพจสำหรับบันทึกเรื่องราวเกี่ยวกับหมากรุกคอมพิวเตอร์ </p>
+<header>
+  <h2>ขั้นตอนการติดตั้ง MakrukFont ให้กับ Winboard</h2>
+</header>
+<section class="main-section">
+  <nav>
+    <ul>
+      <li><a href="#C01">ที่มาที่ไป</a></li>
+      <li><a href="#C02">ขั้นตอนการติดตั้ง MakrukFont ในวินโดว์ส 10</a></li>
+      <li><a href="#C03">ขั้นตอนการตั้งค่าในวินบอร์ด</a></li>
+      <li><a href="#C04">Links</a></li>
+    </ul>
+  </nav>
     
-    <div id="left_navigation">
-        <ul>
-            <li><a href="#C01">ที่มาที่ไป</a></li>
-            <li><a href="#C02">ขั้นตอนการติดตั้ง MakrukFont ในวินโดว์ส 10</a></li>
-            <li><a href="#C03">ขั้นตอนการตั้งค่าในวินบอร์ด</a></li>
-            <li><a href="#C04">Links</a></li>
-        </ul>
-    </div>
-    
-    <section class="section-main">
-        <article class = "article-main">
-        <div>
-            <div id="C01"><b>ที่มาที่ไป</b> <span>[<a href="#left_navigation">Up</a>]</span></div>
-            <p class="indent-1"><span class="yellow">Winboard</span> เป็นโปรแกรมยอดฮิตในการเล่นหมากรุก ด้วยขีดความสามารถที่หลากหลาย 
-                ทั้งฝึกเดินหมาก ทำบันทึกหมาก เล่นกับตนเอง เล่นกับคอมพิวเตอร์ และเล่นกับผู้คนในโลกอินเตอร์เน็ต ด้วยขีดความสามารถที่สามารถเล่นหมากรุกได้
-                หลากหลาย ทั้งหมากรุกสากล หมากรุกไทย หมากรุกจีน หมากรุกญี่ปุ่น หรือแม้กระทั่งหมากฮอส จึงเป็นที่นิยมในเหล่านักกีฬาหมากรุก อย่างไรก็ตาม 
-                เมื่อมีเด่นก็ย่อมมีด้อย เนื่องจากรูปภาพตัวหมากรุกไม่สวยงามตามแบบหมากรุกไทยที่คุ้นชิน ทำให้หลายคนไม่ชอบโปรแกรมนี้ <br/><br/>
-                <img src="images/winboard-normal.png"/><br/><br/>
-                <div id = "image_desc">ภาพวินบอร์ด เล่นหมากรุกไทย ด้วยตัวหมากสากล</div>
-                <br/>
-                ผมก็ไม่ชอบเช่นกัน จึงได้ลงทุนทำฟ้อนต์หมากรุก <span class="yellow">MakrukFont</span> ซึ่งก็คือ true type font ที่ใช้กันในวินโดว์สนี่แหละ 
-                แต่แทนที่จะเป็นอักษร กลับเป็นรูปตัวหมากรุกแทน ผมดูจากที่ฝรั่งเขาทำไว้ แล้วดัดแปลงเป็นตัวหมากรุกไทย ซึ่งข้อดีคือเป็นภาพเวคเตอร์ เมื่อขยายแล้วไม่แตก
-                และสามารถใช้ในโปรแกรมต่าง ๆ ได้ง่ายด้วยเป็นฟ้อนต์ธรรมดา และเจ้าวินบอร์ดนี่ก็สามารถแปลงฟ้อนต์ให้เป็นรูปตัวหมากแสดงในโปรแกรมได้
-                ทำให้ไม่ขึ้นอยู่กับเวอร์ชั่นของโปรแกรม ด้วยโปรแกรมและฟ้อนต์แยกกันอยู่ต่างหาก ผลที่ได้มาประมาณนี้ครับ<br/><br/>
-                <img src="images/winboard-makruk_font_pieces.png"/><br/><br/>
-                <div id = "image_desc">ภาพวินบอร์ด เล่นหมากรุกไทย ด้วยตัวหมากแบบไทย ๆ</div>
-                <br/>
-                <br/>
-            </p>
-            <div id="C02"><b>ขั้นตอนการติดตั้ง MakrukFont ในวินโดว์ส 10</b><span>[<a href="#left_navigation">Up</a>]</span></div>
-            <ol class="indent-1">
-                <li>ดาวโหลดฟ้อนต์จาก<a href="https://github.com/JBamro/JBamro.github.io/blob/master/bin/MakrukFont.rar">Github</a> ที่ผมทำไว้</li>
-                <li>แตกไฟล์ <b>makrukfont.rar</b> ที่ดาวโหลดมาจะได้ <b>makrukfont.ttf</b></li>
-                <li>คลิกขวาที่ไฟล์ <b>makrukfont.ttf</b> แล้วเลือก <b>open with</b> แล้วเลือก <b>Windows font viewer</b><br/><br/>
-                    <img src="images/open_with-window_font_viewwer.png"/>
-                    <div id = "image_desc"></div><br/><br/>
-                    <br/></li>
-                <li>คลิก <b>Install</b>  วินโดว์สจะดำเนินการติดตั้งฟ้อนต์ให้อัตโนมัติ เป็นพันเสร็จขั้นตอนแรก</li>
-            </ol>
-            <br/>
-        </div>
-        <div>
-            <div id="C03"><b>ขั้นตอนการตั้งค่าในวินบอร์ด</b><span>[<a href="#left_navigation">Up</a>]</span></div>
-            <div class="indent-1">
-            <p><strong>ก. เปิดโปรแกรม winboard เพื่อตั้งค่า</strong> (หากยังไม่ได้ติดตั้ง สามารถดาวน์โหลดไฟล์สำหรับติดตั้งโปรแกรมได้ที่ 
-            เว็บไซต์หลักของวินบอร์ด เวอร์ชันที่เสถียรที่สุดอยู่ที่ <a href ="http://hgm.nubati.net/WinBoard-4.8.0.exe">winboard 4.8.0</a> 
-            เป็นไฟล์ติดตั้งอัตโนมัติ ส่วนเวอร์ชั่นล่าสุดเป็นเวอร์ชั่นทดลอง <a href ="http://hgm.nubati.net/WinBoard-AA.zip">winboard-AA</a> 
-            เป็นไฟล์บีบอัด แตกไฟล์ในโฟลเดอร์ที่ต้องการก็ใช้ได้ แล้วคลิกที่ winboard.exe)</p><br/><br/>
-            <p>เปิดวินบอร์ดขึ้นมา คลิก OK แล้ว เลือก File>New Variant...</p>
-            <br/><br/><img src="images/file-new_variant.png"/><br/><br/>
-            <br/><br/><img src="images/variant-makruk.png"/><br/><br/>
-            <p>จะได้การตั้งหมากแบบหมากรุกไทย แต่ตัวหมากจะเป็นแบบสากล</p>
-            <br/><br/><img src="images/winboard-variant-makruk.png"/><br/><br/><br/><br/>
-            <p><strong>ข. ตั้งค่าฟ้อนต์</strong></p>
-            <p>- เลือกเมนู View > Font จะปรากฏหน้าต่างการเลือกประเภทของฟ้อนต์ขึ้นมา </p>
-            <br/><br/><img src="images/view-font-chose.png"/><br/><br/>
-            <p>- ในประเภท Piece Font ให้คลิกเลือก Choose จะปรากฎหน้าต่างสำหรับเลือกชื่อฟ้อนต์ ให้เลื่อนลงไปเลือก MakrukFont จากนั้นคลิก Ok มันจะกลับไปหน้าต่างเลือกชนิดฟ้อนต์ ให้คลิก Ok อีกที เพื่อปิดหน้าต่าง</p>
-            <br/><br/><img src="images/font-selected.png"/><br/><br/><br/>
-            <p><strong>ค. ตั้งค่าสี </strong></p>
-            <p>- เลือกเมนู View > Color จะปรากฎหน้าน้าเลือกสีของกระดานขึ้นมา</p>
-            <br/><br/><img src="images/view-color.png"/><br/><br/>
-            <p>- ส่วนของ White Pieces ให้คลิกที่ ... แล้วเลือกสีขาว</p>
-            <p>- ส่วนของ Black Pieces ให้คลิกที่ ... แล้วเลือกสีดำ</p>
-            <p>- ส่วน Light Squares และ Dark Squares จะเลือกหรือไม่ก็ได้ แต่ในที่นี้ผมเลือกเป็นสีน้ำตาลเหมือนกันเลย เพราะหมากรุกไทยไม่ใช้ตาสลับสี</p>
-            <p>- คลิก Ok เพื่อออกจากหน้าต่างนี้</p><br/><br/>
-            <p><strong>ง. ตั้งค่าธีมของกระดาน</strong></p>
-            <p>- เลือกเมนู View > Board Themes </p>
-            <br/><br/><img src="images/board_themes.png"/><br/><br/>
-            <p>จะปรากฎหน้าต่างตั้งค่าธีมขึ้นมา ตั้งค่าดังนี้</p>
-            <br/><br/><img src="images/theme-makruk.png"/><br/><br/>
-            <p class="indent-1">-- Theme name :  ให้ใส่ค่า Makruk</p>
-            <p class="indent-1">-- (หากต้องการพื้นหลังเป็นลวดลาย) ให้ติ๊กเครื่องหมายถูกหน้า Use board textures<br/>
-                สีของบอร์ดจากไฟล์ bmp ในโฟลเดอร์ textures ของวินบอร์ด ผมเลือกลายไม้ wood_d.bmp ทั้ง Dark-squares และ Light-squares<br/>
-                ส่วนตำแหน่งไฟล์ขึ้นอยู่กับว่าคุณลงโปรแกรมไว้ที่ไดร์ฟอะไร ของผมลงไว้ที่ D จึงเป็นอย่างนี้<br/>
-                (D:\WinBoard\Winboard\textures\wood_d.bmp)</p>
-            <p class="indent-1">-- (หากต้องการภาพกรอบของบอร์ด) ให้ติ๊กเครื่องหมายถูกหน้า Draw border around board<br/>
-                เลือกกรอบของบอร์ดจากไฟล์ bmp ในโฟลเดอร์ backgrounds ของวินบอร์ด ผมเลือกลายไม้ wood_rim.bmp <br/>
-                (ตำแหน่งไฟล์ D:\WinBoard\Winboard\backgrounds\wood_rim.bmp)</p>
-            <p class="indent-1">-- (** สำคัญ **) ให้ติ๊กเครื่องหมายถูกหน้า Use piece font แล้วใส่ค่า Font size (%) : 80 <br/>
-                ส่วน Font name มันจะขึ้นมาเองว่าเป็น MakrukFont (เพราะเราเลือกในหัวข้อก่อนนี้แล้ว)<br/>
-                ส่วน Font piece to char อันนี้สำคัญ  ต้องใส่ลำดับให้ถูกต้องเป็น <b>PNBRQF....SKpnbrqf....sk</b> เท่านั้น<br/>
-                จากนั้นกด OK จะได้ภาพกระดานหมากรุกไทยที่คุ้นตา และสวยงาม</p><br/><br/>
-                <img src="images/winboard-makruk_font_pieces.png"/>
-                <div id = "image_desc"></div><br/><br/>
-                <br/>
-                ขอให้สนุกครับ! <br/><br/>
-                หากท่านเห็นว่ามีประโยชน์กรุณาบริจาคผ่าน <a href="https://paypal.me/BjMakruk?locale.x=th_TH">paypal</a><br/><br/>
-                If you like this project, please support its development via <a href="https://paypal.me/BjMakruk">paypal</a><br/><br/>
-                <br/><br/>
-            </div>
-        </div>
-        <div id="C04">Links [<a href="#left_navigation">Up</a>]</div>
-        <div>
-            <UL>
-                <li><a href="https://github.com/JBamro/JBamro.github.io/blob/master/bin/MakrukFont.rar">MakrukFont ฟ้อนต์หมากรุกไทย</a></li>
-                <li><a href ="http://hgm.nubati.net/WinBoard-4.8.0.exe">winboard 4.8.0 โปรแกรมวินบอร์ด</a></li>
-                <li><a href ="http://hgm.nubati.net/WinBoard-AA.zip">winboard-AA โปรแกรมวินบอร์ด AA เบต้า</a></li>
-            </UL>
-        </div>
-        <div><br/></div>
-        <div><br/></div>
-        </article>
-    </section>
+  <article class = "article-main">
+    <h1 id="C01">ที่มาที่ไป [<a href="#left_navigation">Up</a>]</h1>
+	<!-- 
+	01234567890123456789012345678901234567890123456789012345678901234567890123456789
+	-->
+    <p class="indent-1"><em>Winboard</em> เป็นโปรแกรมยอดฮิตในการเล่นหมากรุก 
+	ด้วยขีดความสามารถที่หลากหลาย ทั้งฝึกเดินหมาก ทำบันทึกหมาก เล่นกับตนเอง เล่นกับคอมพิวเตอร์ และเล่นกับผู้คนในโลกอินเตอร์เน็ต ตลอดจน
+	สามารถเล่นหมากรุกได้หลายประเภท ทั้งหมากรุกสากล หมากรุกไทย หมากรุกจีน หมากรุกญี่ปุ่น หรือแม้กระทั่งหมากฮอส จึงเป็นที่นิยมในเหล่า
+	นักกีฬาหมากรุก อย่างไรก็ตาม เมื่อมีเด่นก็ย่อมมีด้อย เนื่องจากรูปภาพตัวหมากรุกไม่สวยงามตามแบบหมากรุกไทยที่คุ้นชิน ทำให้หลายคนยังคิดว่า
+	โปรแกรมนี้ น่ามีการปรับปรุงภาพตัวหมาก</p>
+	<figure>
+	<img src="images/winboard-normal.png" alt= "winboard with oiginal chess pieces"/>
+	<figcaption>ภาพวินบอร์ด เล่นหมากรุกไทย ด้วยภาพตัวหมากรุกสากล</figcaption>
+    </figure>
+    <p>ผมจึงได้ลองสละเวลาว่างมาทำฟ้อนต์หมากรุก <em>MakrukFont</em> ซึ่งก็คือ true type font ที่ใช้กันในวินโดว์สนี่แหละ 
+	แต่แทนที่จะเป็นอักษร กลับเป็นรูปตัวหมากรุกแทน ผมดูจากที่ฝรั่งเขาทำไว้ แล้วดัดแปลงเป็นตัวหมากรุกไทย ซึ่งข้อดีคือเป็นภาพเวคเตอร์ เมื่อขยาย
+	แล้วไม่แตก และสามารถใช้ในโปรแกรมต่าง ๆ ได้ง่ายด้วยเป็นฟ้อนต์ธรรมดา และเจ้าวินบอร์ดนี่ก็สามารถแปลงฟ้อนต์ให้เป็นรูปตัวหมากแสดงใน
+	โปรแกรมได้ ทำให้ไม่ขึ้นอยู่กับเวอร์ชั่นของโปรแกรม ด้วยโปรแกรมและฟ้อนต์แยกกันอยู่ต่างหาก ผลที่ได้มาประมาณนี้ครับ</p>
+	<figure>
+	<img src="images/winboard-makruk_font_pieces.png" 
+	     alt="winboard with Thai chess pieces" />
+	<figcaption>ภาพวินบอร์ด เล่นหมากรุกไทย ด้วยภาพตัวหมากแบบไทย ๆ </figcaption>
+	</figure>
+	
+	<h1 id="C02">ขั้นตอนการติดตั้ง MakrukFont ในวินโดว์ส 10&nbsp; 
+	[<a href="#left_navigation">Up</a>]</h1>
+	<ol class="indent-1">
+	  <li>ดาวโหลดฟ้อนต์จาก<a 
+	  href="https://github.com/JBamro/JBamro.github.io/blob/master/bin/MakrukFont.rar">
+	  Github</a> ที่ผมทำไว้</li>
+	  <li>แตกไฟล์ <b>makrukfont.rar</b> ที่ดาวโหลดมาจะได้ <b>makrukfont.ttf</b></li>
+	  <li>คลิกขวาที่ไฟล์ <b>makrukfont.ttf</b> แล้วเลือก <b>open with</b> แล้วเลือก 
+	  <b>Windows font viewer</b></li>
+	  <figure>
+	  <img src="images/open_with-window_font_viewwer.png" alt="open with Windows font&nbsp;
+	  viewer" />
+	  <figcaption>ให้เลือก Windows font viewer</figcaption>
+	  </figure>
+	  <li>คลิก <b>Install</b>  วินโดว์สจะดำเนินการติดตั้งฟ้อนต์ให้อัตโนมัติ เป็นพันเสร็จขั้นตอนแรก</li>
+	</ol>
+	
+	<h1 id="C03">ขั้นตอนการตั้งค่าในวินบอร์ด [<a href="#left_navigation">Up</a>]</h1>
+	<p class="indent-1"><strong>ก. เปิดโปรแกรม winboard เพื่อตั้งค่า</strong> (หากยังไม่ได้ติดตั้ง สามารถดาวน์โหลด
+	ไฟล์สำหรับติดตั้งโปรแกรมได้ที่ เว็บไซต์หลักของวินบอร์ด เวอร์ชันที่เสถียรที่สุดอยู่ที่ <a 
+	href ="http://hgm.nubati.net/WinBoard-4.8.0.exe">winboard 4.8.0</a> 
+	เป็นไฟล์ติดตั้งอัตโนมัติ ส่วนเวอร์ชั่นล่าสุดเป็นเวอร์ชั่นทดลอง <a href ="http://hgm.nubati.net/WinBoard-AA.zip">
+	winboard-AA</a>  เป็นไฟล์บีบอัด แตกไฟล์ในโฟลเดอร์ที่ต้องการก็ใช้ได้ แล้วคลิกที่ winboard.exe)</p>
+	<p>เปิดวินบอร์ดขึ้นมา คลิก OK แล้ว เลือก File>New Variant...</p>
+	<figure>
+	<img src="images/file-new_variant.png" alt="choose New variant..." />
+	<figcaption>เลือก New variant...</figcaption>
+	</figure>
+	<figure>
+	<img src="images/variant-makruk.png" alt="choose Makruk" />
+	<figcaption>เลือก Makruk แล้วกด Ok</figcaption>
+	</figure>
+	<figure>
+	<img src="images/winboard-variant-makruk.png" alt="choose Makruk" />
+	<figcaption>จะได้การตั้งหมากแบบหมากรุกไทย แต่ภาพตัวหมากจะเป็นแบบสากล</figcaption>
+	</figure>
+	
+	<p class="indent-1"><strong>ข. ตั้งค่าฟ้อนต์</strong></p>
+	<p>- เลือกเมนู View > Font จะปรากฏหน้าต่างการเลือกประเภทของฟ้อนต์ขึ้นมา </p>
+	<figure>
+	<img src="images/view-font-chose.png" alt="view font" />
+	<figcaption>เลือก View > Font</figcaption>
+	</figure>
+	<p>- ในประเภท Piece Font ให้คลิกเลือก Choose จะปรากฎหน้าต่างสำหรับเลือกชื่อฟ้อนต์ ให้เลื่อนลงไปเลือก&nbsp;
+	MakrukFont จากนั้นคลิก Ok มันจะกลับไปหน้าต่างเลือกชนิดฟ้อนต์ ให้คลิก Ok อีกที เพื่อปิดหน้าต่าง</p>
+	<figure>
+	<img src="images/font-selected.png" alt="font MakrukFont " />
+	<figcaption>เลือก Font > MakrukFont </figcaption>
+	</figure>
+	
+	<p class="indent-1"><strong>ค. ตั้งค่าสี </strong></p>
+	<p>- เลือกเมนู View > Color จะปรากฎหน้าน้าเลือกสีของกระดานขึ้นมา</p>
+	<figure>
+	<img src="images/view-color.png" alt="View color" />
+	<figcaption>เลือกสี </figcaption>
+	</figure>
+	<p>- ส่วนของ White Pieces ให้คลิกที่ ... แล้วเลือกสีขาว</p>
+	<p>- ส่วนของ Black Pieces ให้คลิกที่ ... แล้วเลือกสีดำ</p>
+	<p>- ส่วน Light Squares และ Dark Squares จะเลือกหรือไม่ก็ได้ แต่ในที่นี้ผมเลือกเป็นสีน้ำตาลเหมือนกันเลย &nbsp;
+	เพราะหมากรุกไทยไม่ใช้ตาสลับสี</p>
+	<p>- คลิก Ok เพื่อออกจากหน้าต่างนี้</p><br/><br/>
+	
+	<p ><strong>ง. ตั้งค่าธีมของกระดาน</strong></p>
+	<p>- เลือกเมนู View > Board Themes </p>
+	<figure>
+	<img src="images/board_themes.png" alt="View board themes" />
+	<figcaption>เลือกบอร์ดธีม </figcaption>
+	</figure>
+	<p>จะปรากฎหน้าต่างตั้งค่าธีมขึ้นมา ตั้งค่าดังนี้</p>
+	<figure>
+	<img src="images/theme-makruk.png" alt="board themes" />
+	<figcaption>ตั้งค่า Font piece to char</figcaption>
+	</figure>
+	<p class="indent-1">-- Theme name :  ให้ใส่ค่า Makruk</p>
+	<p class="indent-1">-- (หากต้องการพื้นหลังเป็นลวดลาย) ให้ติ๊กเครื่องหมายถูกหน้า Use board textures<br/>
+	สีของบอร์ดจากไฟล์ bmp ในโฟลเดอร์ textures ของวินบอร์ด ผมเลือกลายไม้ wood_d.bmp ทั้ง Dark-squares &nbsp;
+	และ Light-squares<br/>
+	ส่วนตำแหน่งไฟล์ขึ้นอยู่กับว่าคุณลงโปรแกรมไว้ที่ไดร์ฟอะไร ของผมลงไว้ที่ D จึงเป็นอย่างนี้<br/>
+	(D:\WinBoard\Winboard\textures\wood_d.bmp)</p>
+	<p class="indent-1">-- (หากต้องการภาพกรอบของบอร์ด) ให้ติ๊กเครื่องหมายถูกหน้า Draw border around board<br/>
+	เลือกกรอบของบอร์ดจากไฟล์ bmp ในโฟลเดอร์ backgrounds ของวินบอร์ด ผมเลือกลายไม้ wood_rim.bmp <br/>
+	(ตำแหน่งไฟล์ D:\WinBoard\Winboard\backgrounds\wood_rim.bmp)</p>
+	<p class="indent-1">-- (** สำคัญ **) ให้ติ๊กเครื่องหมายถูกหน้า Use piece font แล้วใส่ค่า Font size (%) : 80 <br/>
+	ส่วน Font name มันจะขึ้นมาเองว่าเป็น MakrukFont (เพราะเราเลือกในหัวข้อก่อนนี้แล้ว)<br/>
+	ส่วน Font piece to char อันนี้สำคัญ  ต้องใส่ลำดับให้ถูกต้องเป็น <b>PNBRQF....SKpnbrqf....sk</b> เท่านั้น<br/>
+	จากนั้นกด OK จะได้ภาพกระดานหมากรุกไทยที่คุ้นตา และสวยงาม</p><br/><br/>
+	<figure>
+	<img src="images/winboard-makruk_font_pieces.png" alt="winboard with makruk font pieces" />
+	<figcaption>วินบอร์ดกับภาพตัวหมากแบบไทย</figcaption>
+	</figure>
+	<h2 class="indent-1">ขอให้สนุกครับ! </h2>
+	<p>หากท่านเห็นว่ามีประโยชน์กรุณาบริจาคผ่าน <a href="https://paypal.me/BjMakruk?locale.x=th_TH">
+	paypal</a> | If you like this project, please support its development via <a 
+	 href="https://paypal.me/BjMakruk">paypal</a></p><br/>
+	
+	<h1 id="C04">Links [<a href="#left_navigation">Up</a>] </h1>
+	<ul>
+		<li><a 
+		href="https://github.com/JBamro/JBamro.github.io/blob/master/bin/MakrukFont.rar">
+		MakrukFont ฟ้อนต์หมากรุกไทย</a></li>
+		<li><a href ="http://hgm.nubati.net/WinBoard-4.8.0.exe">winboard 4.8.0 โปรแกรมวินบอร์ด
+		</a></li>
+		<li><a href ="http://hgm.nubati.net/WinBoard-AA.zip">winboard-AA โปรแกรมวินบอร์ด AA เบต้า
+		</a></li>
+	</ul>
+  </article>
+</section>
 
-    <footer>
-        <p>BJ Makruk</p>
-    </footer>
+<footer>
+Created by BJ-Makruk &copy;2023
+</footer>
 </body>
 </html>
