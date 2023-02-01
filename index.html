@@ -1,71 +1,113 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BJMakruk's page</title>
-    <link rel="stylesheet" href="basic.css">
+<meta charset="UTF-8">
+<title>BJ-Makruk's page | เว็บหมากรุกไทย โดยบีเจ</title>
+<meta name="description" content="Makruk, Thai chess, หมากรุก, หมากรุกไทย, โปรแกรมหมากรุกไทย, บอทหมากรุกไทย"> 
+<meta name="makruk" content="Thai chess, หมากรุก, หมากรุกไทย, โปรแกรมหมากรุกไทย, บอทหมากรุกไทย">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun&family=Chakra+Petch">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Sarabun, 'Chakra Petch', Tahoma, serif;
+}
+
+h1 {
+	font-family: 'Chakra Petch';
+}
+
+/* Style the header */
+header {
+	background-color: #666;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+/* Container for flexboxes */
+section {
+	display: -webkit-flex;
+	display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+	font-family: 'Chakra Petch';
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background: #ccc;
+	padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* Style the content */
+article {
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	background-color: #f1f1f1;
+	padding: 10px;
+}
+
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+  }
+}
+</style>
 </head>
 
 <body>
+<h1>BJ-makruk's page</h1>
+<h2>Thai chess lover</h2>
+<p>เว็บเพจสำหรับบันทึกเรื่องราวเกี่ยวกับหมากรุกคอมพิวเตอร์ </p>
 
-    <center>
-        <div class="text">
-            <table cellpadding=0 cellspacing=0 width="100%" border=0>
-                <tr>
-                    <td width="250">
-                        <div id="header_left">
-                            &nbsp;
-                        </div>
-                    </td>
-    
-                    <td>
-                        <div id="main_title_box">
-                            <div class="title">BJ makruk's page</div>
-                            <div class="subtitle">Thai chess lover</div>
-                        </div>
-                    </td>
-    
-                    <td width="250">
-                        <div id="header_right">
-                            <br><br>
-                        </div>
-                    </td>
-    
-            </table>
-    
-            <div id="local_navigation">
-                <ul>
-                    <li><a href="makrukfont.html">การใช้ฟ้อนต์เป็นตัวหมากรุกในวินบอร์ด Makruk font and Winboard</a></li>
-                    <li></li>
-                </ul>
-            </div>
-    
-        </div>
-    </center>
+<header>
+  <h2>หมากรุกไทย</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="makrukfont.html">การใช้ฟ้อนต์เป็นตัวหมากรุกในวินบอร์ด Makruk font and Winboard</a></li>
+      <li><a href="https://homi.github.io/bj-makruk/bj-makruk/index.html">BJ Makruk 0.17 (บีเจ หมากรุกไทยออนไลน์ เวอร์ชั่น 0.17 )</a></li>
+      <li><a href="#">บอทหมากรุกไทย</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>การใช้ฟ้อนต์เป็นตัวหมากรุกในวินบอร์ด</h1>
+    <p>โปรแกรมเล่นหมากรุก Winboard มีหมากรุกหลาย ๆ แบบ รวมทั้งหมากรุกไทยด้วย แต่ตัวหมากแบบฝรั่งที่เราไม่ค่อยคุ้นเคย ผู้เขียนเลยลองสร้างฟ้อนต์หมากรุกขึ้นมา เพื่อใช้กับหมากรุกไทยโดยเฉพาะ ซึ่งจะทำให้เล่นสบายตาขึ้น </p>
+	<h1>BJ Makruk 0.17</h1>
+	<p>เป็นโปรแกรมเล่นหมากรุกออนไลน์ ผู้เขียนได้ฝึกเขียน javascript โดยดูต้นแบบจากที่เขาสอนในยูทูป นำมาแปลงเป็นหมากรุกไทย ไม่ค่อยเก่ง แต่ก็เล่นได้สนุกหล่ะครับ</p>
+	<h1>บอทหมากรุกไทย</h1>
+	<p>เป็นบทความการสร้างบอท จากเริ่มต้น เพื่อเป็นแนวทางสำหรับคนที่คิดจะสร้างบอทเก่ง ๆ ระดับสต็อกฟิชต่อไป</p>
+  </article>
+</section>
 
-    <center>
-        <div class="text">
-            <hr>
-            <table width="100%" cellpadding=0 cellspacing=0 border=0>
-                <tr>
-                    <td valign=middle width="30%">
-                        &nbsp;
-                    </td>
-                    <td>
-                        <div
-                            style="font-family: Arial; font-weight: normal; font-size: 10pt; text-align: center; line-height: 130%">
-                            Created by BJ-Makruk<br>
-                        </div>
-                    </td>
-                    <td valign=middle width="30%" style="text-align: right;">
-                        &nbsp;
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </center>
-
+<footer>
+Created by BJ-Makruk &copy;2023
+</footer>
 </body>
 </html>
